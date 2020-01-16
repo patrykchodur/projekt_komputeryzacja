@@ -1,3 +1,3 @@
-#Projekt z komputeryzacji pomiarów
+# Projekt z komputeryzacji pomiarów
 
 To w sumie tyle
