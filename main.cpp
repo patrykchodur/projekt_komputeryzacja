@@ -8,12 +8,12 @@ int main() {
 	while (1) loop();
 }
 
-#endif // !ARDUINO
+#endif // ARDUINO
 
 // #define DEBUG
 
-#include "player.hpp"
-#include "biala_flaga.hpp"
+#include "include/player.hpp"
+#include "include/biala_flaga.hpp"
 
 
 

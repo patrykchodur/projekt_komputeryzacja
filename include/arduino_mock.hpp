@@ -1,4 +1,4 @@
-#if !defined(ARDUINO_MOCK_HPP) && !defined(ARDUINO)
+#if !defined(ARDUINO_MOCK_HPP) && !defined(TinkerKit_h)
 #define ARDUINO_MOCK_HPP
 
 #include <stdint.h>
@@ -59,4 +59,4 @@ long millis() {
 #endif // ARDUINO
 
 
-#endif // ARDUINO_MOCK_HPP
+#endif // ARDUINO_MOCK_HPP && TinkerKit_h

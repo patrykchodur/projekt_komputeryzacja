@@ -8,22 +8,19 @@ int main() {
 	while (1) loop();
 }
 
-#endif // !ARDUINO
+#endif // ARDUINO
 
 // #define DEBUG
 
-#include "player.hpp"
-#include "biala_flaga.hpp"
+#include "include/player.hpp"
+#include "include/biala_flaga.hpp"
 
-MemoryReceiver<4> rec(biala_flaga);
-Player<4, MemoryReceiver<4>, unsigned long> player(rec, O0, O1, O2, O3);
 
 
 
 
 void setup() {
 
-	player.loop();
 
 
 
@@ -31,6 +28,8 @@ void setup() {
 
 
 void loop() {
+	MemoryReceiver<4> rec(biala_flaga);
+	Player<4, MemoryReceiver<4>, unsigned long> (rec, O0, O1, O2, O3).loop();
 
 
 }
