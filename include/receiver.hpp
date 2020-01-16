@@ -32,12 +32,12 @@ public:
 		Serial.begin(rate);
 	}
 	
-	int get_next() {
+	signed char get_next() {
 		return Serial.read();
 	}
 
 	explicit operator bool() {
-		return static_cast<bool>(Serial);
+		return static_cast<bool>(Serial.available() > 0);
 	}
 
 };
@@ -86,7 +86,7 @@ public:
 
 	}
 
-	int get_next() {
+	signed char get_next() {
 		if (m_start < 0)
 			m_start = millis();
 		bool finish = true;

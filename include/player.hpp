@@ -44,7 +44,7 @@ public:
 		unsigned long start = millis();
 		while(1) {
 			while (m_receiver) {
-				int tmp = m_receiver.get_next();
+				signed char tmp = m_receiver.get_next();
 				if (tmp >= 32)
 					start_sound(convert_to_len_1(tmp));
 				else if (tmp <= -32)
