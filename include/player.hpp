@@ -41,7 +41,7 @@ public:
 	}
 
 	void loop() {
-		unsigned long start = millis();
+		unsigned long start = micros();
 		while(1) {
 			while (m_receiver) {
 				signed char tmp = m_receiver.get_next();
@@ -51,10 +51,10 @@ public:
 					stop_sound(convert_to_len_1(tmp));
 
 			}
-			unsigned long elapsed = millis() - start;
+			unsigned long elapsed = micros() - start;
 			start = start + elapsed;
 
-			m_driver.update_state(elapsed * 1000);
+			m_driver.update_state(elapsed);
 		}
 	}
 
